@@ -1,11 +1,11 @@
-## Vanishing/Exploding gradients problems 
+## Vanishing/Exploding gradients problems
 In ML, the **vanishing/exploding** (further unstable) **gradient problem** is the problem of greatly diverging gradient magnitudes between earlier and later layers encountered when training NN with [backpropagation](obsidian://open?vault=ZorDann&file=remote%2F01-Study%2F03-AI-ML%20Related%2FBackpropagation.md). 
 In such methods, NN weights are updated proportional to their [partial derivative](obsidian://open?vault=ZorDann&file=remote%2F01-Study%2F00-Math%2FDerivatives.md) of the [loss function](obsidian://open?vault=ZorDann&file=remote%2F01-Study%2F00-Math%2FLoss%20Function.md). As the number of forward propagation steps in a NN increases (for example due to greater NN depth) gradients of earlier weights are calculated with increasingly many multiplications. These multiplications shrink (or significantly increase) the gradient magnitude. 
 
 ## Example
 ### Simple NN structure example
 
-![[Excalidraw/Drawing 2025-08-09 10.28.11.excalidraw]]
+![[vanishing-gradient-example]]
 
 As said before, to update the weights and biases of the NN we would calculate the derivative of loss function. It is calculated as follows: 
 
@@ -39,3 +39,5 @@ So:
 - **Large gradient** → bigger weight updates
 - **Small gradient** → tiny weight updates
 - **Zero gradient** → no learning
+
+#learning-rate #rnn
